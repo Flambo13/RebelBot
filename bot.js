@@ -1,7 +1,6 @@
 const Discord  = require("discord.js");
 const ytdl     = require("ytdl-core");
 const rebelBot = new Discord.Client();
-const token    = "MzgxNjc1MDY1NjAwNzcwMDQ4.DPOLOA.WfHSOPdbFhiDIgFClVFiqjnJoHk";
 const prefix   = "#";
 const game     = "#help"
 var servers    = {};
@@ -91,4 +90,4 @@ rebelBot.on("message", function(message) {
 	}
 });
 
-rebelBot.login(token);
+rebelBot.login(process.env.BOT_TOKEN);
