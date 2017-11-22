@@ -44,12 +44,8 @@ rebelBot.on("message", function(message) {
 		case "dice":
 			if(args[1]) { 
 				var dice = args[1];
-				if (typeof(dice) === "number") {
 				var result = Math.floor(Math.random() * dice + 1);
 				message.channel.send(result);
-			} 
-			else {message.channel.send("Enter an integer");
-			}
 			}else {
 				message.channel.send("Usage: #dice [Integer]");
 			}
