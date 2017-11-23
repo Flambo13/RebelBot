@@ -82,7 +82,9 @@ rebelBot.on("message", function(message) {
 		case "stop":
 				var server = servers[message.guild.id];
 
-				if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
+				if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect(); {
+					message.channel.send("Fine, BAKA");
+				}
 				break;
 		default:
 			message.channel.send("Type a command pls");
