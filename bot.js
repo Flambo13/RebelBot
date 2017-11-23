@@ -5,7 +5,7 @@ const prefix   = "#";
 const game     = "#help"
 var servers    = {};
 var queue      = [];
-var flip       = ["Heads","Tails"];
+var fortunes       = ["Heads","Tails"];
 function play(connection, message) {
 	var server = servers[message.guild.id];
 
