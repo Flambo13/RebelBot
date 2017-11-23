@@ -83,7 +83,7 @@ rebelBot.on("message", function(message) {
 				var server = servers[message.guild.id];
 
 				if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect(); {
-					message.channel.send("Fine, BAKA");
+					message.channel.send("Fine, BAKA!");
 				}
 				break;
 		default:
