@@ -14,8 +14,9 @@ function play(connection, message) {
 
 	server.dispatcher.on("end", function() {
 		if (server.queue[0]) play(conection,message);
-		else connection.disconnect();
-	});
+		else{ connection.disconnect();
+		message.channel.send("Queue Concluded.");
+	}});
 }
 
 rebelBot.on("ready", function(){
