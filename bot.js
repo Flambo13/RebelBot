@@ -5,6 +5,7 @@ const prefix   = "#";
 const game     = "#help"
 var servers    = {};
 var queue      = [];
+var flip       = ["Heads","Tails"];
 function play(connection, message) {
 	var server = servers[message.guild.id];
 
@@ -53,6 +54,9 @@ rebelBot.on("message", function(message) {
 			break;
 		case "help":
 			message.channel.send("");
+			break;
+		case "flip":
+			message.channel.send(fortunes[Math.floor(Math.random() * fortunes.length )]);
 			break;
 		case "play":
 			if (!args[1]) {
